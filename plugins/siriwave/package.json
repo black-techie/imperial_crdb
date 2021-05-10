@@ -1,0 +1,77 @@
+{
+  "_from": "siriwave",
+  "_id": "siriwave@2.2.3",
+  "_inBundle": false,
+  "_integrity": "sha512-peSF4nDL/XPv4pel4AZ+HiE74po4Hl69uMaBIVWdb/qjTGP3dXLUFCkG39A/DFmXAuEI26S+xsyT7kAUPSI36Q==",
+  "_location": "/siriwave",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "siriwave",
+    "name": "siriwave",
+    "escapedName": "siriwave",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/siriwave/-/siriwave-2.2.3.tgz",
+  "_shasum": "b1e2758f54f03dd623cc3460242bf758aada5dc0",
+  "_spec": "siriwave",
+  "_where": "E:\\IMC Projects\\vending-machine-ui",
+  "author": {
+    "name": "Flavio De Stefano"
+  },
+  "browser": "./dist/siriwave.umd.js",
+  "bugs": {
+    "url": "https://github.com/kopiro/siriwave/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "rollup-plugin-serve": "^1.1.0"
+  },
+  "deprecated": false,
+  "description": "The Siri wave replicated in a JS library.",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^6.1.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "rollup": "^2.7.6",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.0.0",
+    "typescript": "^4.1.2"
+  },
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "homepage": "https://github.com/kopiro/siriwave#readme",
+  "keywords": [
+    "siri",
+    "siriwave",
+    "ios"
+  ],
+  "license": "MIT",
+  "main": "./dist/siriwave.esm.js",
+  "module": "./dist/siriwave.esm.js",
+  "name": "siriwave",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kopiro/siriwave.git"
+  },
+  "scripts": {
+    "build": "yarn build:declaration && NODE_ENV=production rollup -c",
+    "build:declaration": "rm -rf ./dist/types && tsc --outDir ./dist/types --declaration && rm -rf ./dist/types/*.js",
+    "dev": "BUILD=watch rollup -c -w",
+    "gh-pages": "git checkout master && git pull && git checkout gh-pages && git reset --hard master && git push -f origin gh-pages && git checkout master"
+  },
+  "types": "./dist/types",
+  "umdName": "SiriWave",
+  "version": "2.2.3"
+}
